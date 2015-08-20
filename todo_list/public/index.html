@@ -9,12 +9,11 @@
 <body>
 
 	<h1>All The Things: Our Tasks</h1>
-	<%= form_for :task, url: tasks_path do |f| %>
-		<p>
-		<%= f.text_field :task  %>
-		<%= f.submit %>
-		</p>
-	<% end %>
+
+	<form id="new-task-form" action="/tasks" method="post">
+		<input type="text" name="body" id="">
+		<input type="submit" value="add">
+	</form>
 
 	<div id="list"></div>
 	
