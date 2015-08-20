@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
+  
+  get 'tasks/index'
+
+  get 'tasks/show'
+
+  get 'tasks/create'
+
+  get 'tasks/update'
+
+  get 'tasks/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/application.js"></script>
+	<title>Document</title>
+</head>
+<body>
+
+	<h1>All The Things: Our Tasks</h1>
+	<%= form_for :task, url: tasks_path do |f| %>
+		<p>
+		<%= f.text_field :task  %>
+		<%= f.submit %>
+		</p>
+	<% end %>
+
+	<div id="list"></div>
+	
+</body>
+</html>
