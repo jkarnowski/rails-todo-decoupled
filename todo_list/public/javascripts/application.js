@@ -6,6 +6,7 @@ $(document).on('ready', function(){
 			var urlVal = $(this).attr('action')
 			var typeVal = $(this).attr('method')
 			var dataVal = $(this).serialize()
+			var textField = $('#task-input')
 
 		$.ajax({
 			url: urlVal,
@@ -13,8 +14,9 @@ $(document).on('ready', function(){
 			data: dataVal,
 			dataType: 'JSON'
 		}).done(function(sData){
-			console.log(sData);
-			console.log('yay girly girl');
+			textField.val("");
+			$('#list').append(sData.body);
+			
 		}).fail(function(sData){
 			console.log(sData);
 			console.log('nay girly girl');
