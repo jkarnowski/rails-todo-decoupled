@@ -15,12 +15,23 @@ $(document).on('ready', function(){
 			dataType: 'JSON'
 		}).done(function(sData){
 			textField.val("");
-			$('#list').append(sData.body);
+			var task = new SingleTask(sData);
+			$('#list').append(task.display());
 			
 		}).fail(function(sData){
 			console.log(sData);
 			console.log('nay girly girl');
 		})
 	})
-
 })
+
+var SingleTask = function(taskObject) {
+	this.body = taskObject.body;
+}
+
+SingleTask.prototype.display = function() {
+	var task = $("<div>").append(
+		this.body + "            DELETE"
+		)
+	return task;
+};
