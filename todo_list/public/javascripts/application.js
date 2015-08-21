@@ -29,9 +29,7 @@ var SingleTask = function(taskObject) {
 	this.body = taskObject.body;
 }
 
-SingleTask.prototype.display = function() {
-	var task = $("<div>").append(
-		this.body + "            DELETE"
-		)
+git SingleTask.prototype.display = function() {
+	var task = $("<div>").append( '<input type="checkbox">'+this.body+' <a href="/tasks"> delete </a> <br>' )
 	return task;
 };
